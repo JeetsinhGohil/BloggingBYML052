@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Assignments | Campus Notes</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap logo-icon"></i> Campus Notes
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="assignments.html" class="active">Assignments</a></li>
+                <li><a href="create.html">Create Post</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div style="margin-bottom: 2rem;">
+            <h1 class="post-title" style="margin-bottom: 0.5rem;">Browse Assignments</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem;">Discover notes, tutorials, and past assignments from your peers.</p>
+        </div>
+
+        <section class="filter-section">
+            <div class="search-bar">
+                <div style="position: relative;">
+                    <i class="fas fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-light);"></i>
+                    <input type="text" id="search-input" class="form-control" placeholder="Search by title, author, or tags..." style="padding-left: 2.5rem;">
+                </div>
+            </div>
+            
+            <select id="subject-filter" class="form-control" style="width: auto; min-width: 150px;">
+                <option value="">All Subjects</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Database Management">Database Management</option>
+                <option value="Computer Networks">Computer Networks</option>
+                <option value="Operating Systems">Operating Systems</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Data Structures">Data Structures</option>
+            </select>
+
+            <select id="semester-filter" class="form-control" style="width: auto; min-width: 150px;">
+                <option value="">All Semesters</option>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 3">Semester 3</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 5">Semester 5</option>
+                <option value="Semester 6">Semester 6</option>
+                <option value="Semester 7">Semester 7</option>
+                <option value="Semester 8">Semester 8</option>
+            </select>
+
+            <select id="sort-filter" class="form-control" style="width: auto; min-width: 150px; margin-left: auto;">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+        </section>
+
+        <section>
+            <div class="grid-cards" id="assignments-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: #94a3b8; font-size: 0.9rem;">&copy; 2026 Campus Notes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
